@@ -1,5 +1,11 @@
 # alby-report
 
+[![PyPI version](https://img.shields.io/pypi/v/alby-report.svg?color=3776ab&logo=pypi&logoColor=white)](https://pypi.org/project/alby-report/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/alby-report.svg?color=3776ab)](https://pypi.org/project/alby-report/)
+[![Python versions](https://img.shields.io/pypi/pyversions/alby-report.svg?color=3776ab&logo=python&logoColor=white)](https://pypi.org/project/alby-report/)
+[![CI](https://github.com/alby-sh/alby-python/actions/workflows/ci.yml/badge.svg)](https://github.com/alby-sh/alby-python/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 Official [Alby](https://alby.sh) error-tracking SDK for Python.
 
 Captures uncaught exceptions and anything you explicitly report, then ships them to your Alby project where an AI agent can auto-open a fix task.
@@ -114,9 +120,11 @@ For synchronous delivery, inject your own `Transport` via `alby.init(transport=.
 
 This SDK speaks the [Alby Ingest Protocol v1](./PROTOCOL_V1.md). If you're writing a new SDK (different runtime, different language) start there.
 
-## Publishing
+## Links
 
-PyPI release is automated via GitHub Actions on tags matching `v*`. The workflow uses PyPI's trusted publisher / OIDC flow (`pypa/gh-action-pypi-publish@release/v1`). Before the first tag, configure the trusted publisher for the `alby-report` project under `alby-sh/alby-python`'s repo in the PyPI project settings.
+- Website: [alby.sh](https://alby.sh)
+- Report issues: [GitHub Issues](https://github.com/alby-sh/alby-python/issues)
+- Other SDKs: [alby-js](https://github.com/alby-sh/alby-js) · [alby-browser](https://github.com/alby-sh/alby-browser) · [alby-php](https://github.com/alby-sh/alby-php)
 
 ## License
 
