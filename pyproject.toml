@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "alby-report"
+version = "0.1.0"
+description = "Official Alby error tracking SDK for Python."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [{ name = "Alby", email = "info@alby.sh" }]
+keywords = [
+    "alby",
+    "error-tracking",
+    "monitoring",
+    "observability",
+    "crash-reporting",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Bug Tracking",
+    "Topic :: System :: Monitoring",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+requests = ["requests>=2.25"]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://alby.sh"
+Source = "https://github.com/alby-sh/alby-python"
+Issues = "https://github.com/alby-sh/alby-python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/alby"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/alby",
+    "README.md",
+    "LICENSE",
+    "PROTOCOL_V1.md",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
