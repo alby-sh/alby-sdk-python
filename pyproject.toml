@@ -44,8 +44,8 @@ dev = [
 
 [project.urls]
 Homepage = "https://alby.sh"
-Source = "https://github.com/alby-sh/alby-python"
-Issues = "https://github.com/alby-sh/alby-python/issues"
+Source = "https://github.com/alby-sh/alby-sdk-python"
+Issues = "https://github.com/alby-sh/alby-sdk-python/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/alby"]
